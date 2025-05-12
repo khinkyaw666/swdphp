@@ -1,48 +1,112 @@
+<!-- // If/Else: Write a script that checks if a number is even or odd. -->
 <?php
-$number = 6;
-
-if ($number%2==1) {
-    echo "<br>";
-    echo "<br>";
-    echo "$number is odd";
-
-}else {
-    echo "<br>";
-    echo "<br>";
+  $number = 5;
+  if($number % 2 == 0) {
     echo "$number is even";
-};
-echo "<br>";
-$num1 = 9;
-$num2 = 3;
-$action = "*";
-switch ($action) {
-    case '+':
-        echo $num1+$num2;
-        break;
-        case '-':
-            echo $num1-$num2;
-            break;    
-            case '*':
-                echo $num1*$num2;
-                break;
-                case '/':
-                    echo $num1/$num2;
-                    break;
-
-    
-    default:
-        echo "Action error";
-        break;
-};
-function factorial($n) {
-    $result = 1;
-    for ($i= 1; $i < $n; $i++) { 
-        $result *= $n;
-    }
-    return $result;
-};
-echo "<br>";
-echo factorial(5);
-
-
+  } else {
+    echo "$number is odd";
+  }
 ?>
+
+<!-- // Switch: Create a simple calculator using switch for operations (+, -, *, /). -->
+<?php
+  $num1 = 10;
+  $num2 = 5;
+  $action = "+";
+
+  switch ($action) {
+    case "+":
+      echo $num1 + $num2;
+      break;
+    case "-":
+      echo $num1 - $num2;
+      break;
+    case "*":
+      echo $num1 * $num2;
+      break;
+    case "/":
+      echo $num1 / $num2;
+      break;
+    default:
+      echo "Error";
+      break;
+  }
+?>
+
+<!-- // function default value -->
+<?php
+  function greetting($name = "Guest") {
+    return "Hello, $name";
+  }
+  $result = greetting();
+  echo "<br>";
+  echo $result;
+
+  // default value, 
+  // type restriction
+  // scope (local, global)
+
+
+  // Project Start
+  // PO - Product Owner | PCo - Project Coordinator, 
+  // BA - Business Analyst, 
+  // PM - Project Manager, 
+  // QA - Quality Assurance, 
+  // FE - Front End, 
+  // BE - Back End 
+
+  // Array
+  // 1. Indexed Array
+  // 2. Associative Array
+  // 3. Multidimensional Array
+
+  // 1. Indexed Array - eg
+  $fruits = array("Apple", "Orange", "Banana");
+  // foreach
+  foreach ($fruits as $fruit) {
+    echo "<br>";
+    echo $fruit;
+  }
+
+
+  // 2. Associative Array - eg
+  $person = array(
+    "name" => "John",
+    "age" => 30,
+    "city" => "New York"
+  );
+  // foreach loop
+  foreach ($person as $key => $value) {
+    echo "<br>";
+    echo $key . ": " . $value;
+  }
+
+  // Ex
+  $mark = array(
+    "Aung" => 80,
+    "Kyaw Kyaw" => 40,
+    "Hla Hla" => 70
+  );
+
+  foreach ($mark as $key => $value) {
+    if ($value >= 50) {
+      echo "<br>";
+      echo $key . " Passed";
+    } else {
+      echo "<br>";
+      echo $key . " Failed";
+    }
+  }
+
+//   <!-- Multidimensional array -->
+// index muti array
+ $users = array(
+    array("Aung Aung",30,"Yangon"),
+    array("Htun Htun",50,"Mandalay"),
+    array("Aung Aung",60,"Bago"),
+ )
+
+
+  
+?>
+

@@ -1,0 +1,19 @@
+Revision
+==========================
+1.
+-local server- XAMPP install(Apache,mySQL)
+-first php file
+
+2.
+-data type (same with JS)
+-git push
+
+3.
+-debegging syntax error find
+-pratice
+
+4.
+-function 
+    -reusable, call
+    -default value (parameter)
+-array

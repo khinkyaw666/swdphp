@@ -1,0 +1,12 @@
+//features Eg. client need,want 
+
+-students (name,grade) - store in array - multi -------->from database
+-dispalay (name / (passed or failed))
+
+-login (username , password) - admin,12345
+-view student info (light/ dark)
+-logout
+
+//index.php(login info)
+//dashboard.php (student info) with array//set_theme.php (btn to switch)
+

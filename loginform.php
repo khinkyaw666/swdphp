@@ -1,21 +1,12 @@
-<?php 
-  session_start();
-  if(isset($_SESSION['login'])) {
-    header("Location: dashboard.php"); // already logged in
-    exit();
-  }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
+  <title>Login Form</title>
 </head>
 <body>
-
-  <h1>Login Page</h1>
-  <form action="#" method="post">
+  <form action="login_form.php" method="post">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username"><br>
     <label for="password">Password:</label>
@@ -25,16 +16,23 @@
 </body>
 </html>
 
-<?php 
+<?php
+  // collect form data
   if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = htmlspecialchars($_POST['username']);
-    $password = htmlspecialchars($_POST['password']);
-    if ($username == "admin" && $password == "123456") {
+    $username = htmlspecialchars($_POST["username"]);
+    $password = htmlspecialchars($_POST["password"]);
+
+    // validate form data
+    if($username == "admin" && $password == "123456") {
+      // login successful
+      session_start();
       $_SESSION['login'] = true;
       $_SESSION['username'] = $username;
-      header("Location: dashboard.php"); // login successful
+      header("Location: profile.php");
+      exit();
     } else {
-      echo "Invalid username or password";
+      // login failed
+      echo "Login failed";
     }
   }
 ?>

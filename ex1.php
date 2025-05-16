@@ -108,11 +108,7 @@
   foreach($users as $user) {
     echo "<br>";
     echo $user["name"] . ", " . $user["age"] . ", " . $user["city"];
-  }
-
-  // Todo
-  // create new file - form.php
-  // HTML form (name - text, age - number, city - text, submit - button)
+  } 
 ?>
 
 <?php echo "Hello"; ?>
